@@ -1,0 +1,71 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+/*---------------------------- header ----------------------------*/
+header{
+  position: fixed;
+  background: transparent;
+  border-radius: 30px;
+
+  animation: enhance-header linear both;
+  animation-timeline: scroll(root block);
+}
+
+.header-button{
+  color: white;
+  background: transparent;
+  border-color: transparent;
+}
+
+.header-button:hover{
+  color: rgba(177, 150, 245, 0.944);
+}
+
+@keyframes enhance-header {
+  to{
+    background: rgba(177, 150, 245, 0.412);
+    backdrop-filter: blur(5px);
+  }
+}
+
+/*---------------------------- main ----------------------------*/
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+section{
+  margin-top: 50px;
+}
+
+.contact-button{
+  border-radius: 30px;
+  border: 1px solid #646cff85;
+  transition: 0.3s ease-in-out;
+}
+.contact-button:hover {
+  border: 1px solid #646cff;
+  box-shadow:  1px 1px 5px 3px #646cff66;
+}
