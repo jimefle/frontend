@@ -1,3 +1,34 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  --color: rgba(255, 255, 255, 0.87);
+  --background-color: #1a1a1a;
+  --button-hover-color: rgba(186, 158, 255, 0.974);
+  --enhance-header-color:rgba(177, 150, 245, 0.412);
+  --button-color:white;
+  --button-hover-shadow:rgba(186, 158, 255, 0.974);
+  --underline-hover:rgba(186, 158, 255, 0.974);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[data-theme="light"] {
+  --background-color: #dcd3d3;
+  --color: black;
+  --button-hover-color: rgb(234, 100, 169) ;
+  --enhance-header-color: rgba(233, 136, 186, 0.744);
+  --button-color:rgb(232, 111, 159);
+  --button-hover-shadow:rgb(233, 136, 186);
+  --underline-hover: rgb(233, 136, 186);
+}
+
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,30 +37,35 @@
   scroll-behavior: smooth;
 }
 
-.read-the-docs {
-  color: #888;
-}
-
 body{
+  background-color: var(--background-color);
+  color: var(--color);
+  margin: 0;
+  place-items: center;
   display: flex;
   flex-direction: column;
   position: relative;
+  min-width: 320px;
+  min-height: 100vh;
 }
-a{
+
+button {
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: var(--background-color);
   cursor: pointer;
   transition: border-color 0.25s;
-  text-decoration: inherit;
 }
+
 /*---------------------------- header ----------------------------*/
 header{
   position: fixed;
+  display: flex;
+  align-items: center;
   background: transparent;
   border-radius: 30px;
   padding: 6px;
@@ -38,24 +74,117 @@ header{
 }
 
 .header-button{
-  color: white;
+  color: var(--color);
   background: transparent;
   border-color: transparent;
-  margin: 20px;
+}
+
+a{
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0em 1.2em;
+  font-size: 1.1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--background-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+  text-decoration: inherit;
 }
 
 .header-button:hover{
-  color: rgba(186, 158, 255, 0.974);
+  color: var(--button-hover-color);
 }
 
 @keyframes enhance-header {
   to{
-    background: rgba(177, 150, 245, 0.412);
+    background: var(--enhance-header-color);
     backdrop-filter: blur(5px);
   }
 }
+/* ------ dark/light button ------ */
+/* ---- credit: https://codepen.io/singhimalaya/pen/PdqbqV ----*/
+.toggle-btn {
+  position: relative;
+  width: 60px;
+  height: 34px;
+  margin: 0;
+  border-radius: 17px;
+}
+
+input[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  margin: 0px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#a-toggle-btn span {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  overflow: hidden;
+  opacity: 1;
+  background-color: #fff;
+  border-radius: 17px;
+  transition: 0.2s ease background-color, 0.2s ease opacity;
+}
+
+#a-toggle-btn span:before,
+#a-toggle-btn span:after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  transition: 0.5s ease transform, 0.2s ease background-color;
+}
+
+#a-toggle-btn span:before {
+  background-color: #fff;
+  transform: translate(0px, 0px);
+  z-index: 1;
+}
+
+#a-toggle-btn span:after {
+  background-color: #000;
+  transform: translate(-26px, 0px);
+  z-index: 0;
+}
+
+#a-toggle-btn input[type="checkbox"]:checked + span {
+  background-color: #000;
+}
+
+#a-toggle-btn input[type="checkbox"]:active + span {
+  opacity: 0.5;
+}
+
+#a-toggle-btn input[type="checkbox"]:checked + span:before {
+  background-color: #000;
+  transform: translate(-12px, -6px);
+}
+
+#a-toggle-btn input[type="checkbox"]:checked + span:after {
+  background-color: #fff;
+  transform: translate(-3px, 0px);
+}
 
 /*---------------------------- main ----------------------------*/
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
 
 main{
   display: flex;
@@ -84,14 +213,15 @@ main{
 }
 
 .contact-button{
-  color: white;
+  color: var(--button-color);
   border-radius: 30px;
-  border: 1px solid rgba(186, 158, 255, 0.974);
+  border: 1px solid var(--button-hover-shadow);
   transition: 0.4s ease-in-out;
+  padding: 0.6em 1.2em;
 }
 .contact-button:hover {
-  border: 1px solid rgb(186, 158, 255);
-  box-shadow:  1px 1px 3px 2px rgba(186, 158, 255, 0.974);
+  border: 1px solid var(--button-hover-shadow);
+  box-shadow:  1px 1px 3px 2px var(--button-hover-shadow);
 }
 
 /*----------------------- proyectos -----------------------*/
@@ -120,8 +250,20 @@ i{
 
 h2:hover{
   text-decoration: underline;
-  text-decoration-color: rgba(186, 158, 255, 0.974);
+  text-decoration-color: var(--underline-hover);
 }
 h4{
   margin-left: 30px;
+}
+
+/*----------------------- aboutme -----------------------*/
+.about-info{
+  display: flex;
+  gap: 20px;
+}
+
+.me-image{
+  border-radius: 50%;
+  height: 150px;
+  
 }
