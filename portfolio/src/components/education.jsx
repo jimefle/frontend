@@ -15,6 +15,16 @@ function Education(){
               <li> Inglés | Cambridge First Certificate (B2)</li>
               <li> Italiano | ADA (B1)</li>
             </ul>
+            <h3>Habilidades</h3>
+            <div className="skills">
+              <img src="./src/image/js.png" alt="JS"/>
+              <img src="./src/image/science.png" alt="React"/>
+              <img src="./src/image/html-5.png" alt="HTML"/>
+              <img src="./src/image/css3.png" alt="CSS"/>
+              <img src="./src/image/github.png" alt="Git"/>
+              <img src="./src/image/sql.png" alt="SQL"/>
+              <img src="./src/image/python.png" alt="Python"/>
+            </div>
           </section>
     )
 }

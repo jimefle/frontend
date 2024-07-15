@@ -234,6 +234,7 @@ main{
 /*----------------------- educacion -----------------------*/
 section{
   margin-top: 50px;
+  margin-bottom: 50px;
   text-align: start;
   width: 70%;
 }
@@ -254,12 +255,28 @@ h2:hover{
 }
 h4{
   margin-left: 30px;
+  font-weight: 400;
+}
+ul{
+  list-style-type: circle;
+}
+li{
+  padding: 10px;
 }
 
+.skills{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+img{
+  height: 50px;
+}
 /*----------------------- aboutme -----------------------*/
 .about-info{
   display: flex;
   gap: 20px;
+  margin-bottom: 100px;
 }
 
 .me-image{

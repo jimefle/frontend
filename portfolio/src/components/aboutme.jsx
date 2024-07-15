@@ -7,16 +7,24 @@ function Aboutme() {
             </div>
             <article className='about-info'>
               <img src=".\src\image\photo-profile.jpg" alt="Foto de perfil" className="me-image" />
-              <p>Es como un santuario (laico) erigido para honrar la memoria de un ateo irreductible. 
-              Esa puede ser la sensación inicial que se experimente al ascender por la escalera de la Fundación José Saramago, e
-              n cuyos escalones se pueden leer frases extraídas de los distintos libros que el prolífico novelista portugués escribió 
-              a lo largo de una trayectoria creativa que, en 1998, desembocó en la obtención del Premio Nobel de Literatura.
-
-              En el primer piso de esta institución de Lisboa, Portugal, se encuentra el acceso a la muestra permanente “Saramago: 
-              la semilla y los frutos”, una travesía exhaustiva y cautivadora sobre la vida intelectual de uno de los grandes narradores europeos
-              del siglo XX. Y el primer impacto en la retina del visitante es claramente del orden de las emociones: una gigantografía reproduce
-              una foto del archivo familiar, datada en 1953, en la que un Saramago en la plenitud de su madurez posa, 
-              en bicicleta, junto a su pequeña hija Violante.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam efficitur risus ac justo faucibus, 
+                et porta turpis tempor. Ut at sagittis metus. Nunc congue nunc ut volutpat molestie. Aenean vitae eros 
+                sed nisl elementum mattis vel a massa. Class aptent taciti sociosqu ad litora torquent per conubia nostra, 
+                per inceptos himenaeos. Nulla vitae metus at urna euismod mollis. Nunc pellentesque arcu risus. Interdum et 
+                malesuada fames ac ante ipsum primis in faucibus. Cras maximus metus aliquet, venenatis nulla eget, aliquam libero. 
+                Vestibulum nec tincidunt dolor. Pellentesque luctus dui eu auctor volutpat.
+                Phasellus non rhoncus tortor, in elementum dolor. Orci varius natoque penatibus et magnis dis parturient montes, 
+                nascetur ridiculus mus. Sed quis eleifend enim, sit amet egestas lacus. Fusce quis nulla feugiat, tincidunt eros eget, 
+                vulputate neque. Aenean ut orci est. Aliquam hendrerit eros ut tempor tempus. Vivamus luctus est et nibh posuere, at lobortis 
+                sem faucibus. Curabitur commodo lacus in neque tincidunt, in auctor sapien consequat. Praesent dictum imperdiet ullamcorper. 
+                Aliquam sed neque bibendum dui suscipit tincidunt nec in purus. Sed convallis, magna id dapibus faucibus, lorem est congue nisl, 
+                vitae porttitor nunc eros non risus. Nullam cursus felis in metus dictum, a pharetra velit viverra.
+                Fusce suscipit ut ipsum at pulvinar. Praesent ac urna tristique tortor laoreet finibus. Aenean consectetur diam et turpis 
+                vehicula dapibus. Nullam viverra lacinia ultrices. Cras vel libero nec orci fermentum imperdiet non nec lorem. Integer tincidunt 
+                lectus vitae lacus bibendum semper. Integer congue viverra lacus, quis aliquet lectus. Sed dapibus aliquet nunc, non rutrum purus
+                laoreet vitae. Aliquam fringilla auctor congue. Curabitur convallis tempor tincidunt. Nunc ut egestas arcu, vel vehicula ligula. 
+                Suspendisse vestibulum aliquam quam, quis hendrerit mauris lacinia a. Duis eleifend leo in est varius, eu vulputate purus 
+                malesuada. Sed ultricies lacus libero, non vehicula risus congue non.</p>
               
             </article>
           </section>
