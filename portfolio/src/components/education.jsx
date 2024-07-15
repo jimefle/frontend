@@ -1,4 +1,5 @@
-function Education(){
+/* eslint-disable react/prop-types */
+function Education({theme}){
     return(
         <section>
             <div className='section-icon'>
@@ -21,12 +22,18 @@ function Education(){
               <img src="./src/image/science.png" alt="React"/>
               <img src="./src/image/html-5.png" alt="HTML"/>
               <img src="./src/image/css3.png" alt="CSS"/>
-              <img src="./src/image/github.png" alt="Git"/>
+              <ImageChange theme={theme} />
               <img src="./src/image/sql.png" alt="SQL"/>
               <img src="./src/image/python.png" alt="Python"/>
             </div>
           </section>
     )
+}
+
+function ImageChange ({theme}){
+  const imageSrc = theme === 'dark' ? './src/image/github.png' : './src/image/github-light.png'
+
+  return <img src={imageSrc} alt="Descripción" />
 }
 
 export default Education

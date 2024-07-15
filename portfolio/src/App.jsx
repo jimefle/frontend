@@ -38,7 +38,7 @@ function App() {
         <main>
           <Hero></Hero>
           <Proyects></Proyects>
-          <Education></Education>
+          <Education theme={theme}></Education>
           <Aboutme></Aboutme>
         </main>
       </body>
